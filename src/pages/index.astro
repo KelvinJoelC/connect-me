@@ -1,5 +1,7 @@
 ---
-
+import LinkCard from "../components/LinkCard.astro"
+import { CardList } from "../consts/CardList";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -8,9 +10,22 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>ConnectMe | Kelvin Carreno</title>
+	    <meta name="description" content="All my links in the same place.">
 	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+	<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans transition-colors duration-300">
+    	<main class="min-h-screen flex flex-col items-center justify-center px-4">
+      		<header class="flex flex-col mb-6 text-center items-center">
+    			<img src="/favicon.svg" alt="Kelvin avatar" class="w-24 h-24 rounded-full shadow-lg mb-4" />
+        		<h1 class="text-2xl font-bold">Kelvin Carreño</h1>
+        		<p class="text-sm text-gray-500 dark:text-gray-400">Desarrollador Web | Explorador del mundo digital</p>
+    		</header>
+      	<section class="w-full max-w-md space-y-4">
+        	{CardList.map(link => (
+          	<LinkCard {...link} />
+        	))}
+      	</section>
+      	<footer class="mt-10 text-xs text-gray-400">© {new Date().getFullYear()} ConnectMe by Kelvin</footer>
+    </main>
+  </body>
 </html>
