@@ -10,11 +10,12 @@ export const CardList = [
     url: 'https://www.linkedin.com/in/kcarrenoespin',
     description: 'Mi perfil profesional',
     icon: 'icons/linkedin.svg'
-  },
-  {
-    title: 'Instagram',
-    url: 'https://instagram.com/kelvin',
-    description: 'Mi lado personal',
-    icon: 'icons/instagram.svg'
   }
+  // ,
+  // {
+  //   title: 'Instagram',
+  //   url: 'https://instagram.com/kelvin',
+  //   description: 'Mi lado personal',
+  //   icon: 'icons/instagram.svg'
+  // }
 ]
